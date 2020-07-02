@@ -3,6 +3,8 @@
  * Copyright (c) 2020. Mikhail Lazarev
  */
 
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-};
+export interface Contact {
+  id: string;
+  name: string;
+  avatar: string;
+}

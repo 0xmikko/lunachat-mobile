@@ -4,5 +4,8 @@
  */
 
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  bracketSpacing: false,
+  jsxBracketSameLine: true,
+  singleQuote: true,
+  trailingComma: 'all',
 };
