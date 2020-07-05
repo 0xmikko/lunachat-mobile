@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import {Image, SafeAreaView, StyleSheet, View} from 'react-native';
+import {Image, ImageBackground, SafeAreaView, StyleSheet, View} from 'react-native';
 import {Button, Text} from 'react-native-elements';
 import {useNavigation} from '@react-navigation/native';
 import {commonStyles} from '../../../styles';
@@ -12,17 +12,19 @@ import {commonStyles} from '../../../styles';
 export const SplashScreen: React.FC = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView
+    <View
       style={{
         ...commonStyles.safeAreaContainerCentered,
-        backgroundColor: 'white',
+        backgroundColor: '#0b1535',
+          width: '100%',
       }}>
+        {/*<ImageBackground source={require('../../assets/background.jpg')} style={styles.image} >*/}
       <Image
         source={require('../../../logo.png')}
         style={{
-          height: 200,
+          height: 220,
           resizeMode: 'contain',
-          marginBottom: 8,
+          marginBottom: 28,
           marginTop: -40,
         }}
       />
@@ -31,7 +33,7 @@ export const SplashScreen: React.FC = () => {
         style={{
           fontSize: 18,
           fontWeight: 'bold',
-          color: '#687882',
+          color: '#ffeb83',
           marginTop: 5,
         }}>
        NuCypher based chat
@@ -41,15 +43,29 @@ export const SplashScreen: React.FC = () => {
           title="Login / Signup"
           onPress={() => navigation.navigate('PhoneScreen')}
           type="outline"
+          buttonStyle={{borderColor: "#FFF"}}
+          titleStyle={{color: "#FFF"}}
+
+
         />
       </View>
-    </SafeAreaView>
+        {/*</ImageBackground>*/}
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    width: '80%',
+    width: '70%',
     paddingTop: 50,
+      borderColor: "#ffeb83"
   },
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: "center",
+        width: '100%',
+    },
 });

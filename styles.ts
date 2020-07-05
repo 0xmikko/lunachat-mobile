@@ -6,7 +6,7 @@ export const theme: Theme = {
     rounded: true,
   },
   Text: {
-    h1Style: {fontSize: 32, fontWeight: 'bold', color: '#4171c3'},
+    h1Style: {fontSize: 52, fontWeight: 'bold', color: '#fff'},
     h2Style: {fontSize: 18, fontWeight: 'bold', color: 'rgba(38,50,60,1)'},
     h3Style: {fontSize: 14, color: '#757677'},
     h4Style: {fontSize: 16, fontWeight: '500'},
