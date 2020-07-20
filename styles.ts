@@ -1,3 +1,8 @@
+/*
+ * Lunachat - sattelite chat based on NuCypher
+ * Copyright (c) 2020. Mikhail Lazarev
+ */
+
 import {Theme} from 'react-native-elements';
 import {StyleSheet} from 'react-native';
 

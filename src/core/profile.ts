@@ -10,8 +10,8 @@ export interface Profile{
   id: string;
   name: string;
   avatar: string;
-  contactsList: Contact[];
-  chatsList: Chat[];
+  contacts: Contact[];
+  chats: Chat[];
 }
 
 export interface ProfileChangeNameDTO {

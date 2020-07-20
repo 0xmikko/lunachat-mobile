@@ -10,8 +10,8 @@ import {WelcomeStack} from './Welcome/WelcomeStack';
 import actions, {actionsAfterAuth} from '../store/actions';
 import {Router} from './Router';
 import {authSelector, isAuthenticatedSelector} from 'redux-data-connect';
-import {profileSelector} from '../store/profile';
 import {LoadingView} from 'rn-mobile-components';
+import {Text} from "react-native";
 
 export const AuthSwitcher: React.FC = () => {
   const {status} = useSelector(authSelector);
@@ -44,6 +44,6 @@ export const AuthSwitcher: React.FC = () => {
         return <WelcomeStack />;
       }
 
-      return <WelcomeStack />;
+      return <Router />
   }
 };

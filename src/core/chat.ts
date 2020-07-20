@@ -11,7 +11,6 @@ export interface Chat {
   name: string;
   members: Contact[];
   messages: Message[];
-  isTetATetChat: boolean;
 }
 
 export interface ChatCreateDTO {

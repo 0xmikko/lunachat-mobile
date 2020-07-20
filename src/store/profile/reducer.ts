@@ -12,8 +12,8 @@ const initialState: ProfileState = {
   id: '',
   name: 'Loading',
   avatar: '',
-  chatsList: [],
-  contactsList: [],
+  chats: [],
+  contacts: [],
   account: '-',
   amount: '-',
 };
