@@ -28,7 +28,6 @@ export const ChatDetailsScreen: React.FC = () => {
   const route = useRoute<ChatDetailsScreenRouteProp>();
   const {id} = route.params;
 
-  const [iMessages, setIMessages] = useState<IMessage[]>([]);
 
   useEffect(() => {
     const newHash = Date.now().toString();
@@ -43,17 +42,10 @@ export const ChatDetailsScreen: React.FC = () => {
 
   const messages = chatData?.messages;
 
-  useEffect(() => {
-    if (messages === undefined) {
-      setIMessages([]);
-    } else {
-      setIMessages(
+  const iMessages = (messages === undefined) ? [] :
         messages
           .sort((m1, m2) => (m1.createdAt < m2.createdAt ? 1 : -1))
-          .map(mapMessageToIMessage),
-      );
-    }
-  }, [messages]);
+          .map(mapMessageToIMessage)
 
   const profile = useSelector(profileSelector);
   if (chatData === undefined) return <LoadingView />;
