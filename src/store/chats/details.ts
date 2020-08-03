@@ -46,6 +46,8 @@ export function createChatDataLoaderDetailsReducer() {
       id = '-';
     }
 
+    id = id.toUpperCase();
+
     switch (action.type) {
       case CHATS_PREFIX + DETAIL_SUCCESS:
         const existingChat = state.data[id];

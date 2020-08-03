@@ -38,7 +38,7 @@ export const ChatDetailsScreen: React.FC = () => {
   const chatData = useSelector(chatDetailsDataSelector(id));
 
 
-  console.log("CHATDATA", chatData)
+  console.log("CHATDATA", chatData, id)
 
   const messages = chatData?.messages;
 
